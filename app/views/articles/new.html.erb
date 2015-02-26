@@ -1,21 +1,5 @@
 <h1>Create a New Artivle</h1>
 
 <div class="article">
-  <%= form_for(@article) do |f| %>
-    <ul>
-      <% @article.errors.full_messages.each do |error|%>
-        <li><%= error %></li>
-      <% end -%>
-      <p>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </p>
-      <p>
-        <%= f.label :body %>
-        <%= f.text_field :body %>
-      </p>
-      <p>
-        <%= f.submit %>
-      </p>
-  <% end -%>
+  <%= render partial: 'form' %>  
 </div>
